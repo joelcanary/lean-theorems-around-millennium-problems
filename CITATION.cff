@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these formalizations, please cite this repository."
+title: "Verified results in Lean 4: Redheffer and Smith determinants, congruent-number twists, hypersurface Euler characteristics, and the Panoptic Quality metric"
+authors:
+  - family-names: "Cruz Cabrera"
+    given-names: "Joel"
+year: 2026
+license: Apache-2.0
+repository-code: "https://github.com/joelcanary/lean-verified-results"
+keywords:
+  - Lean 4
+  - Mathlib
+  - Redheffer matrix
+  - Mertens function
+  - Smith determinant
+  - congruent numbers
+  - Panoptic Quality
