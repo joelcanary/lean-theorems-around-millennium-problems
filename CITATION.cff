@@ -4,6 +4,7 @@ title: "Verified results in Lean 4: Redheffer and Smith determinants, congruent-
 authors:
   - family-names: "Cruz Cabrera"
     given-names: "Joel"
+    orcid: "https://orcid.org/0009-0005-4048-1237"
 year: 2026
 license: Apache-2.0
 repository-code: "https://github.com/joelcanary/lean-verified-results"
