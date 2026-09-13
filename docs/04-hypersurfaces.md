@@ -61,8 +61,7 @@ theorem ventana_es_oeis_A005581 (d : Int) :
 
 It rests on `hodge_surface_betti` (`6 · h^{2,0} = (d−1)(d−2)(d−3)`) and on the lower bound
 `cota_le_pg` / `cota_lt_pg` (`d − 3 ≤ p_g(d)`, strict for `d ≥ 4`; equality only for `d = 2, 3`,
-`cota_eq_pg_iff`). The sequence itself is classical (A005581 counts, among other things, the
-number of ways to choose `3` points on an `n`-line "star"); what is new is the identification of
+`cota_eq_pg_iff`). The sequence itself is a long-standing OEIS entry (closed form `(n−1) n (n+4) / 6`); what is new is the identification of
 the Noether–Lefschetz window with it, and the kernel-checked proof for all `d`. Preprint:
 [10.5281/zenodo.21535860](https://doi.org/10.5281/zenodo.21535860).
 
