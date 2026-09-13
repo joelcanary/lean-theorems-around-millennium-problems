@@ -1,4 +1,8 @@
-# Verified results in Lean 4 — number theory, arithmetic geometry and a metric
+# Lean 4 theorems around the Millennium problems
+
+![Lean 4 theorems around the Millennium problems](figures/social-preview.png)
+
+Verified results in Lean 4 — number theory, arithmetic geometry and a metric.
 
 Machine-checked theorems (Lean 4 + Mathlib, **zero `sorry`**, standard axioms only)
 produced during an exploratory mathematics campaign in 2025–2026. Each file is a
