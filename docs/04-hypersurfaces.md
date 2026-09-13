@@ -44,6 +44,28 @@ With `pg m n = C(m − 1, n + 1)` the geometric genus of a degree-`m` hypersurfa
 | quintic threefold and K3 are CY; cubic surface is Fano; sextic threefold is general type | `quintica_es_CY`, `k3_es_CY`, `cubica_es_Fano`, `sextica_tipo_general` |
 | genus–degree formula for plane curves `g = (m−1)(m−2)/2` | `genus_degree` (and `genero_conica/cubica/cuartica/quintica`) |
 
+## Surfaces: the Noether–Lefschetz window is OEIS A005581
+
+For a smooth surface of degree `d` in `P^3`, the Noether–Lefschetz locus `NL_d` (surfaces with
+Picard number `≥ 2`) has components whose codimension in `|O(d)|` lies between `d − 3`
+(Green 1989, Voisin 1989; attained by surfaces containing a line) and the geometric genus
+`p_g(d) = C(d−1, 3)`. The *window* `W(d) = p_g(d) − (d − 3)` was first compared numerically
+(`d = 4 … 200`, exact rationals) with the OEIS entry [A005581](https://oeis.org/A005581),
+`a(n) = (n−1) n (n+4) / 6`, and found to agree at `n = d − 3`. The file closes this for every
+integer `d` as an identity of polynomials, stated without division (`×6`):
+
+```
+theorem ventana_es_oeis_A005581 (d : Int) :
+    (d - 1) * (d - 2) * (d - 3) - 6 * (d - 3) = (d - 4) * (d - 3) * (d + 1)
+```
+
+It rests on `hodge_surface_betti` (`6 · h^{2,0} = (d−1)(d−2)(d−3)`) and on the lower bound
+`cota_le_pg` / `cota_lt_pg` (`d − 3 ≤ p_g(d)`, strict for `d ≥ 4`; equality only for `d = 2, 3`,
+`cota_eq_pg_iff`). The sequence itself is classical (A005581 counts, among other things, the
+number of ways to choose `3` points on an `n`-line "star"); what is new is the identification of
+the Noether–Lefschetz window with it, and the kernel-checked proof for all `d`. Preprint:
+[10.5281/zenodo.21535860](https://doi.org/10.5281/zenodo.21535860).
+
 ## Threefolds: parity of `χ` and the mirror-symmetry number `h^{2,1}`
 
 For a smooth hypersurface threefold, Lefschetz gives `b_0 = b_6 = 1`, `b_1 = b_5 = 0`,
