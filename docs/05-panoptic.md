@@ -1,7 +1,7 @@
 # The Panoptic Quality metric, exactly
 
 **Files:** `PanopticDuplicados.lean`, `PanopticFamilia.lean`, `PanopticCandidato.lean`,
-`PanopticTecho.lean`, `PanopticUmbral.lean`.
+`PanopticQuitar.lean`, `PanopticTecho.lean`, `PanopticUmbral.lean`.
 
 These theorems came out of the IEEE BigData Cup 2026 solar-filament segmentation challenge,
 whose score is the Panoptic Quality (Kirillov et al., CVPR 2019):
@@ -59,6 +59,24 @@ i.e. **`p · j > PQ / 2`**. This is exact, not an approximation: both branches m
 denominator by the same `½` (`den_acierto`, `den_fallo`), which is what makes the rule
 so simple. `umbral_equilibrio` restates it as a threshold on `p` given `j`. In the challenge this
 rule fixed two confidence thresholds.
+
+## 3b. When removing a detection pays (`PanopticQuitar.lean`)
+
+The mirror of §3. A detection already on the list contributes `p · j` to the numerator and
+exactly `½` to the denominator whichever way it turns out (a true positive removed becomes a
+false negative, `den_quitar_acierto`; a false positive removed just disappears,
+`den_quitar_fallo`). Removing it raises the score exactly when
+
+```lean
+theorem pq_quitar_iff ... : pq s n fp fn < pqQuitar s p j n fp fn ↔ p * j < pq s n fp fn / 2
+```
+
+i.e. **`p · j < PQ / 2`**, with `quitar_le_pq` for the direction actually used (at or above
+the threshold, removing never helps) and `quitar_candidato` closing the circuit with §3
+(adding then removing returns the original score). In the challenge this is the rule that
+decides whether a band of detections (by size, by grouping, by confidence) stays: measured on
+validation, no band of the final model falls below `PQ/2 ≈ 0.216`, so the annotators' rule
+"ignore filaments too small or too faint" adds nothing on top of the operating point.
 
 ## 4. The two-annotator ceiling (`PanopticTecho.lean`)
 
