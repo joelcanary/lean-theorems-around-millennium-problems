@@ -53,7 +53,8 @@ theorem a_p_twist (n : ℤ) (p : ℕ) [Fact p.Prime] (hn : (n : ZMod p) ≠ 0) :
         = (n : ZMod p) ^ 3 * (t ^ 3 - t) := by ring
     rw [heq, map_mul, hcube]
   simp_rw [hstep]
-  rw [← Finset.mul_sum]
-  ring
+  -- el sumatorio de la derecha es el de E_1: n = 1 hace que ↑1 ^ 2 * x sea x,
+  -- cosa que `ring` no ve porque ocurre DENTRO del binder del sumatorio
+  simp only [Int.cast_one, one_pow, one_mul, Finset.mul_sum, mul_neg]
 
 end BSDTwist

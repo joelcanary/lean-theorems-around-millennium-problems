@@ -194,11 +194,7 @@ theorem vecMul_mu_zeta (N : ℕ) :
               by_cases h : (x : ℕ) + 1 ∣ (k : ℕ) + 1 <;> simp [h]]
   rw [fin_sum_eq_divisors_sum (N + 1) ((k : ℕ) + 1) (by omega) (by omega)]
   rw [suma_mu_divisores]
-  have hiff : (k : ℕ) + 1 = 1 ↔ k = 0 := by rw [Fin.ext_iff, Fin.val_zero]; omega
-  by_cases hk : k = 0
-  · simp [hk]
-  · have hne : (k : ℕ) + 1 ≠ 1 := fun h => hk (hiff.mp h)
-    simp [hne]
+  by_cases hk : k = 0 <;> simp [hk]
 
 /-- Como ζ es invertible, μ·ζ=e₁ determina μ = fila 1 de ζ⁻¹ (cancelación por
     la derecha: multiplicar ambos lados por ζ⁻¹). -/
@@ -225,7 +221,8 @@ theorem crux_general (N : ℕ) (u : Fin (N + 1) → ℤ) :
 
 theorem range_a_Icc2 (N : ℕ) :
     (∑ i ∈ Finset.range N, (μ (i + 2) : ℤ)) = ∑ k ∈ Finset.Icc 2 (N + 1), (μ k : ℤ) := by
-  apply Finset.sum_nbij' (fun i => i + 2) (fun k => k - 2) <;> intros <;> simp_all <;> omega
+  apply Finset.sum_nbij' (fun i => i + 2) (fun k => k - 2) <;> intros <;> simp_all
+  all_goals omega
 
 theorem mertens_peel (N : ℕ) : mertens (N + 1) = 1 + ∑ k ∈ Finset.Icc 2 (N + 1), (μ k : ℤ) := by
   unfold mertens
