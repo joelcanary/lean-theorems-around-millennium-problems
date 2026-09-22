@@ -1,5 +1,5 @@
 name = "lean_verified_results"
-defaultTargets = ["RiemannRedheffer", "SmithDeterminant", "SmithLCM", "SmithLCMForma", "BSDParidad", "BSDTwist", "HodgeMathlib", "PanopticDuplicados", "PanopticCandidato", "PanopticQuitar", "PanopticTecho", "PanopticFamilia", "PanopticUmbral"]
+defaultTargets = ["RiemannRedheffer", "SmithDeterminant", "SmithLCM", "SmithLCMForma", "BSDParidad", "BSDTwist", "BSDDeuring", "HodgeMathlib", "PanopticDuplicados", "PanopticCandidato", "PanopticQuitar", "PanopticTecho", "PanopticFamilia", "PanopticUmbral"]
 
 [[require]]
 name = "mathlib"
@@ -44,3 +44,6 @@ name = "PanopticFamilia"
 
 [[lean_lib]]
 name = "PanopticUmbral"
+
+[[lean_lib]]
+name = "BSDDeuring"
