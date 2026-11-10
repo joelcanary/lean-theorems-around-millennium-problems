@@ -107,4 +107,4 @@ guaranteed by the annotations being disjoint, a hypothesis nobody imposes on pre
 
 ## References
 
-* A. Kirillov, K. He, R. Girshick, C. Rother, P. Dollár, *Panoptic Segmentation*, CVPR 2019.
+* A. Kirillov, K. He, R. Girshick, C. Rother, P. Dollár, *Panoptic Segmentation*, CVPR 2019, 9396–9405. [doi:10.1109/CVPR.2019.00963](https://doi.org/10.1109/CVPR.2019.00963), [arXiv:1801.00868](https://arxiv.org/abs/1801.00868)

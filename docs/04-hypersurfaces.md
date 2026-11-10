@@ -48,7 +48,7 @@ With `pg m n = C(m − 1, n + 1)` the geometric genus of a degree-`m` hypersurfa
 
 For a smooth surface of degree `d` in `P^3`, the Noether–Lefschetz locus `NL_d` (surfaces with
 Picard number `≥ 2`) has components whose codimension in `|O(d)|` lies between `d − 3`
-(Green 1989, Voisin 1989; attained by surfaces containing a line) and the geometric genus
+(Green 1989, Voisin 1989 — see References; attained by surfaces containing a line) and the geometric genus
 `p_g(d) = C(d−1, 3)`. The *window* `W(d) = p_g(d) − (d − 3)` was first compared numerically
 (`d = 4 … 200`, exact rationals) with the OEIS entry [A005581](https://oeis.org/A005581),
 `a(n) = (n−1) n (n+4) / 6`, and found to agree at `n = d − 3`. The file closes this for every
@@ -60,8 +60,8 @@ theorem ventana_es_oeis_A005581 (d : Int) :
 ```
 
 It rests on `hodge_surface_betti` (`6 · h^{2,0} = (d−1)(d−2)(d−3)`) and on the lower bound
-`cota_le_pg` / `cota_lt_pg` (`d − 3 ≤ p_g(d)`, strict for `d ≥ 4`; equality only for `d = 2, 3`,
-`cota_eq_pg_iff`). The sequence itself is a long-standing OEIS entry (closed form `(n−1) n (n+4) / 6`); what is new is the identification of
+`cota_le_pg` / `cota_lt_pg` (`d − 3 ≤ p_g(d)`, strict for `d ≥ 5`; equality only for `d = 3, 4`,
+`cota_eq_pg_iff` — stated in the file's variable `m = d − 1`: strict for `m ≥ 4`, equality iff `m = 2, 3`). The sequence itself is a long-standing OEIS entry (closed form `(n−1) n (n+4) / 6`); what is new is the identification of
 the Noether–Lefschetz window with it, and the kernel-checked proof for all `d`. Preprint:
 [10.5281/zenodo.21535860](https://doi.org/10.5281/zenodo.21535860).
 
@@ -87,5 +87,8 @@ inspection are checked for all `d` at once, in a kernel-verified way.
 
 ## References
 
-* F. Hirzebruch, *Topological Methods in Algebraic Geometry*, 3rd ed., Springer (1978), §22.
-* P. Candelas, X. de la Ossa, P. Green, L. Parkes, *A pair of Calabi–Yau manifolds as an exactly soluble superconformal theory*, Nucl. Phys. B 359 (1991) — `h^{1,1} = 1`, `h^{2,1} = 101` for the quintic.
+* F. Hirzebruch, *Topological Methods in Algebraic Geometry*, 3rd ed., Grundlehren 131, Springer (1966; corrected printing 1978), §22. [doi:10.1007/978-3-642-62018-8](https://doi.org/10.1007/978-3-642-62018-8)
+* P. Candelas, X. de la Ossa, P. Green, L. Parkes, *A pair of Calabi–Yau manifolds as an exactly soluble superconformal theory*, Nucl. Phys. B 359 (1991) — `h^{1,1} = 1`, `h^{2,1} = 101` for the quintic. [doi:10.1016/0550-3213(91)90292-6](https://doi.org/10.1016/0550-3213(91)90292-6)
+* P. A. Griffiths, *On the periods of certain rational integrals I, II*, Ann. of Math. 90 (1969) 460–495 and 496–541 — the Hodge numbers `h^{n,0}` of hypersurfaces. [doi:10.2307/1970746](https://doi.org/10.2307/1970746), [doi:10.2307/1970747](https://doi.org/10.2307/1970747)
+* M. L. Green, *Components of maximal dimension in the Noether–Lefschetz locus*, J. Differential Geom. 29 (1989) 295–302. [doi:10.4310/jdg/1214442876](https://doi.org/10.4310/jdg/1214442876)
+* C. Voisin, *Composantes de petite codimension du lieu de Noether–Lefschetz*, Comment. Math. Helv. 64 (1989) 515–526. [doi:10.1007/BF02564692](https://doi.org/10.1007/BF02564692)

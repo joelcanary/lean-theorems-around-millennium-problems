@@ -81,5 +81,5 @@ and was submitted as [mathlib4#43749](https://github.com/leanprover-community/ma
 
 ## References
 
-* H. J. S. Smith, *On the value of a certain arithmetical determinant*, Proc. London Math. Soc. 7 (1875–76), 208–212.
-* P. Haukkanen, J. Wang, J. Sillanpää, *On Smith's determinant*, Linear Algebra Appl. 258 (1997) — survey of the `f(gcd)` and `lcm` generalizations.
+* H. J. S. Smith, *On the value of a certain arithmetical determinant*, Proc. London Math. Soc. 7 (1875–76), 208–212. [doi:10.1112/plms/s1-7.1.208](https://doi.org/10.1112/plms/s1-7.1.208)
+* P. Haukkanen, J. Wang, J. Sillanpää, *On Smith's determinant*, Linear Algebra Appl. 258 (1997) 251–269 — survey of the `f(gcd)` and `lcm` generalizations. [doi:10.1016/S0024-3795(96)00192-9](https://doi.org/10.1016/S0024-3795(96)00192-9)

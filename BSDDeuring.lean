@@ -1,5 +1,7 @@
 /-
   BSDDeuring.lean — Deuring's vanishing: a_p(E_n) = 0 for every p ≡ 3 (mod 4)
+  (M. Deuring, Die Typen der Multiplikatorenringe elliptischer Funktionenkörper,
+  Abh. Math. Sem. Univ. Hamburg 14 (1941) 197–272, doi:10.1007/BF02940746)
 
   The congruent-number curves E_n : y² = x³ − n²x are supersingular at every prime
   p ≡ 3 (mod 4) of good reduction. With the character-sum definition of a_p already

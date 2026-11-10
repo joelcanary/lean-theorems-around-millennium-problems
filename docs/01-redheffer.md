@@ -69,6 +69,6 @@ formalization in a proof assistant; the Mathlib pull request is under review.
 
 ## References
 
-* R. M. Redheffer, *Eine explizit lösbare Optimierungsaufgabe*, ISNM 36 (1977), 213–216.
-* W. Barrett, R. Forcade, A. Pollington, *On the spectral radius of a (0,1) matrix related to Mertens' function*, Linear Algebra Appl. 107 (1988).
-* R. C. Vaughan, *On the eigenvalues of Redheffer's matrix I*, in *Number Theory with an Emphasis on the Markoff Spectrum* (1993).
+* R. M. Redheffer, *Eine explizit lösbare Optimierungsaufgabe*, ISNM 36 (1977), 213–216. [doi:10.1007/978-3-0348-5936-3_13](https://doi.org/10.1007/978-3-0348-5936-3_13)
+* W. Barrett, R. Forcade, A. Pollington, *On the spectral radius of a (0,1) matrix related to Mertens' function*, Linear Algebra Appl. 107 (1988) 151–159. [doi:10.1016/0024-3795(88)90241-8](https://doi.org/10.1016/0024-3795(88)90241-8)
+* R. C. Vaughan, *On the eigenvalues of Redheffer's matrix I*, in *Number Theory with an Emphasis on the Markoff Spectrum*, Lect. Notes Pure Appl. Math. 147, Dekker (1993) 283–296. No DOI; [zbMATH 0794.15010](https://zbmath.org/?q=an%3A0794.15010).

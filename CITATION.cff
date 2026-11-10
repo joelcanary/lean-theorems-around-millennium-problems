@@ -7,7 +7,7 @@ authors:
     orcid: "https://orcid.org/0009-0005-4048-1237"
 year: 2026
 license: Apache-2.0
-repository-code: "https://github.com/joelcanary/lean-verified-results"
+repository-code: "https://github.com/joelcanary/lean-theorems-around-millennium-problems"
 keywords:
   - Lean 4
   - Mathlib

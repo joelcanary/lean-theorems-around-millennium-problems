@@ -156,7 +156,8 @@ theorem b3_par (d : Int) : Even (4 - chi3 d) := by
 /-- h^{2,1}(d) = (4−χ(d))/2 − h^{3,0}(d), bien definido (entero) para todo d, con
     h^{3,0} = C(d−1,4) (m=d−1 como Nat, aquí ya como valor concreto por caso). La
     quíntica (d=5, m=4): (4−(−200))/2 − 1 = 102 − 1 = 101 — el 101 clásico de la
-    simetría especular de Candelas et al. (1985). -/
+    simetría especular (Candelas, de la Ossa, Green y Parkes, Nucl. Phys. B 359
+    (1991) 21–74, doi:10.1016/0550-3213(91)90292-6). -/
 theorem h21_quintica_de_formula_general :
     (4 - chi3 5) / 2 - (pg 4 3 : Int) = 101 := by
   unfold chi3 pg; decide
